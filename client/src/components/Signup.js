@@ -44,7 +44,7 @@ export const SignupForm = () => {
         },
         body: JSON.stringify(values, null, 2),
       }).then((res) => {
-        if (res.status == 200) {
+        if (res.status === 200) {
           setRefreshPage(!refreshPage);
         }
       });
@@ -64,9 +64,9 @@ export const SignupForm = () => {
           value={formik.values.email}
         />
         <p style={{ color: "red" }}> {formik.errors.email}</p>
+
         <label htmlFor="name">Name</label>
         <br />
-
         <input
           id="name"
           name="name"
@@ -77,7 +77,6 @@ export const SignupForm = () => {
 
         <label htmlFor="age">age</label>
         <br />
-
         <input
           id="age"
           name="age"
